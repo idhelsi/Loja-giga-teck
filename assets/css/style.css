@@ -82,13 +82,14 @@ aside {
 }
 
 .produtos {
-  min-height: calc(72vh - 100px);
+  min-height: calc(70vh - 100px);
   margin: 15px 0;
   display: grid;
   gap: 10px 0px;
   grid-template-columns: repeat(5, 1fr);
   justify-items: center;
 }
+
 .produto {
   height: 310px;
   background-color: rgba(255, 255, 255, 0.3);
@@ -97,6 +98,7 @@ aside {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   text-align: center;
 }
+
 .produtos a {
   display: flex;
   text-decoration: none;
@@ -104,15 +106,18 @@ aside {
   flex-direction: column;
   align-items: flex-start;
 }
+
 .produtos a img {
   border-radius: 5%;
   height: 200px;
   width: 200px;
 }
-h3{
+
+h3 {
   margin: 5px 0;
   font-size: 18px;
 }
+
 h1 {
   margin: 0;
 }
@@ -122,31 +127,81 @@ footer {
   background-color: #080a09;
   justify-content: center;
 }
+
 .area {
   display: flex;
 }
+
 .areaitem {
   flex: 1;
   color: #fff;
 }
+
 .widget_title_bar {
   width: 50px;
   height: 2px;
   background-color: #06ed9d;
   margin-top: 10px;
 }
+
 .flexColumn {
   flex-direction: column;
 }
+
 .widget_title {
   margin-top: 30px;
   margin-bottom: 20px;
 }
+
 .widget_title_text {
   color: #fff;
 }
+
 .flexColumn {
   flex-direction: column;
+}
+
+.widget_img {
+  display: flex;
+}
+
+.widget_img a {
+  display: flex;
+  margin: 0 5px;
+  background-color: #b0b0b0;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.widget_img a:nth-child(1):hover {
+  background-color: #128C7E; /* Cor ao passar o mouse no primeiro link (WhatsApp) */
+}
+
+.widget_img a:nth-child(2):hover {
+  background-color: #C13584; /* Cor ao passar o mouse no segundo link (Instagram) */
+}
+
+
+.widget_img div {
+  display: flex;
+  margin: 0 5px;
+  background-color: #37beb0;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.widget_img div img {
+  margin: 6px;
+  height: 22px;
+}
+.widget_img img {
+  height: 22px;
 }
 
 .direitos {
@@ -160,34 +215,42 @@ footer {
 }
 
 @media (min-width: 769px) and (max-width: 1140px) {
-  aside{
+  aside {
     gap: 50px;
   }
+
   .produtos {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
 @media (min-width: 426px) and (max-width: 768px) {
   .container {
     max-width: 750px;
   }
-  aside{
+
+  aside {
     gap: 50px;
   }
+
   .produtos {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
 @media (max-width: 426px) {
   .container {
     max-width: 410px;
   }
-  aside{
+
+  aside {
     gap: 15px;
   }
+
   .produtos {
     grid-template-columns: repeat(1, 1fr);
   }
+
   .area {
     flex-direction: column;
   }
