@@ -168,7 +168,6 @@ footer {
 .widget_img a {
   display: flex;
   margin: 0 5px;
-  background-color: #b0b0b0;
   height: 35px;
   width: 35px;
   border-radius: 50%;
@@ -176,12 +175,15 @@ footer {
   align-items: center;
   cursor: pointer;
 }
-.widget_img a:nth-child(1):hover {
-  background-color: #128C7E; /* Cor ao passar o mouse no primeiro link (WhatsApp) */
+.widget_img a:nth-child(1){
+  background-color: #128C7E; 
 }
 
-.widget_img a:nth-child(2):hover {
-  background-color: #C13584; /* Cor ao passar o mouse no segundo link (Instagram) */
+.widget_img a:nth-child(2) {
+  background-color: #C13584; 
+}
+.widget_img a:hover {
+  background-color: #CCC; 
 }
 
 
