@@ -1,7 +1,19 @@
 [
     {
         "id": 1,
-        "photo": "../../img/relogio.jpg",
+        "photo": "./img/relogio.jpg",
+        "description": "Relógio básico",
+        "price": "99.00"
+    },
+    {
+        "id": 1,
+        "photo": "./img/relogio.jpg",
+        "description": "Relógio básico",
+        "price": "99.00"
+    },
+    {
+        "id": 1,
+        "photo": "./img/relogio.jpg",
         "description": "Relógio básico",
         "price": "99.00"
     }
