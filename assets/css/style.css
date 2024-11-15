@@ -16,6 +16,9 @@ header {
 .container {
   max-width: 1140px;
   margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .header-area {
@@ -85,41 +88,70 @@ aside {
   min-height: calc(70vh - 100px);
   margin: 15px 0;
   display: grid;
-  gap: 10px 0px;
-  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  grid-template-columns: repeat(4, 1fr);
   justify-items: center;
 }
 
 .produto {
-  height: 310px;
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 5px;
-  padding: 5px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  text-align: center;
+  width: 250px;
+  height: 350px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 3%;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
 }
 
 .produtos a {
   display: flex;
+  height: inherit;
+  width: inherit;
   text-decoration: none;
   color: #000;
   flex-direction: column;
   align-items: flex-start;
+  border-radius: inherit;
 }
 
 .produtos a img {
-  border-radius: 5%;
-  height: 200px;
-  width: 200px;
+  border-radius: inherit;
+  height: 240px;
+  width: inherit;
 }
 
-h3 {
-  margin: 5px 0;
-  font-size: 18px;
+.produtos .descr {
+  margin: 5px 0px 17px 5px;
+  font-size: 15px;
+  font-weight: 600;
+  color: rgb(66, 70, 77);
 }
 
-h1 {
-  margin: 0;
+.produtos .oldPriceCard {
+  display: flex;
+  margin: 0px 0px 0px 5px;
+  font-size: 0.75rem;
+  line-height: 1.375rem;
+  font-weight: 400;
+  align-items: center;
+  height: 0.75rem;
+  color: rgb(86, 92, 105);
+  text-decoration: line-through;
+}
+.produtos .text-xs {
+  font-size: 12px;
+  line-height: 16px;
+  --tw-text-opacity: 1;
+  color: rgb(127 133 141 / var(--tw-text-opacity));
+}
+.margin {
+  margin: 0px 0px 0px 7px;
+}
+
+
+.produtos .preco {
+  margin: 0px 0px 0px 7px;
+  font-size: 21px;
+  font-weight: 700;
+  color: #06ed9d;
 }
 
 
@@ -165,44 +197,44 @@ footer {
   display: flex;
 }
 
-.widget_img a {
+.widget_atende {
+  display: flex;
+  align-items: center;
+}
+
+.widget_atendimento .bola {
   display: flex;
   margin: 0 5px;
   height: 35px;
   width: 35px;
   border-radius: 50%;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  cursor: pointer;
-}
-.widget_img a:nth-child(1){
-  background-color: #128C7E; 
 }
 
-.widget_img a:nth-child(2) {
-  background-color: #C13584; 
-}
-.widget_img a:hover {
-  background-color: #CCC; 
+.widget_atendimento div:nth-child(1) .bola {
+  background-color: #128C7E;
 }
 
+.widget_atendimento div:nth-child(2) .bola {
+  background-color: #C13584;
+}
 
-.widget_img div {
+.widget_pagamento .bola {
   display: flex;
   margin: 0 5px;
-  background-color: #37beb0;
   height: 35px;
   width: 35px;
+  background-color: #09bfb1;
   border-radius: 50%;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  cursor: pointer;
 }
-.widget_img div img {
-  margin: 6px;
+
+.widget_atendimento div img,
+.widget_pagamento div img {
+  margin: 0px 12px 0px 7px;
   height: 22px;
-}
-.widget_img img {
   height: 22px;
 }
 
@@ -217,18 +249,8 @@ footer {
 }
 
 @media (min-width: 769px) and (max-width: 1140px) {
-  aside {
-    gap: 50px;
-  }
-
-  .produtos {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media (min-width: 426px) and (max-width: 768px) {
   .container {
-    max-width: 750px;
+    max-width: 900px;
   }
 
   aside {
@@ -240,17 +262,54 @@ footer {
   }
 }
 
+@media (min-width: 426px) and (max-width: 768px) {
+  .container {
+    max-width: 675px;
+  }
+
+  aside {
+    gap: 50px;
+  }
+
+  .produtos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .produto {
+    width: 200px;
+    height: 316px;
+  }
+  .produtos a img {
+    border-radius: inherit;
+    height: 200px;
+    width: inherit;
+ }
+}
+
 @media (max-width: 426px) {
   .container {
     max-width: 410px;
   }
 
+  .header-left img {
+    height: 80px;
+    width: 80px;
+  }
+
   aside {
-    gap: 15px;
+    gap: 10px;
+  }
+
+  .produto {
+    width: 150px;
+    height: 275px;
   }
 
   .produtos {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .produtos a img {
+    height: 160px;
   }
 
   .area {
